@@ -7,8 +7,9 @@
 
 /* —— body + fonts —— */
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Monotype Corsiva", cursive;
   color: #333;
+  background: #ffffff;
   display: flex;
   justify-content: center;
 }
@@ -16,6 +17,13 @@ body {
 .page-wrapper {
   width: 90%;
   max-width: 900px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 /* header */
@@ -24,10 +32,20 @@ body {
   padding-top: 50px;
 }
 
+.site-logo {
+  display: block;
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 32px;
+}
+
 .site-title {
+  font-family: "Archer", Georgia, serif;
   font-size: 22px;
   font-weight: 500;
-  margin-bottom: 10px;
+  color: #e3a535;
+  margin-bottom: 0;
 }
 
 /* chat window */
@@ -37,12 +55,14 @@ body {
 
 .chat-window {
   height: 360px;
-  border: 1px solid #000;
+  border: 2px solid #cccccc;
   padding: 20px;
+  font-family: "Benton Sans Pro", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5;
   overflow-y: auto;
-  background: #fafafa;
+  color: #000000;
+  background: #ffffff;
   white-space: pre-line;
 }
 
@@ -53,11 +73,27 @@ body {
 }
 
 .msg.user {
-  color: #000;
+  color: #000000;
 }
 
 .msg.ai {
-  color: #666666;
+  width: fit-content;
+  max-width: 90%;
+  margin-right: auto;
+  padding: 12px;
+  border-left: 4px solid #ff003b;
+  color: #333333;
+}
+
+.question {
+  width: fit-content;
+  max-width: 90%;
+  margin-left: auto;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-left: 4px solid #e3a535;
+  background: #fff8e8;
+  color: #333333;
 }
 
 /* input row */
@@ -70,18 +106,21 @@ body {
 .chat-form input {
   flex: 1;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  font-family: "Benton Sans Pro", Arial, sans-serif;
   font-size: 18px;
 }
 
 .chat-form input:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #000000;
   outline-offset: 2px;
 }
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
+  font-family: inherit;
+  background: #ff003b;
   color: #fff;
   border: none;
   padding: 12px;
@@ -99,11 +138,11 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #e60035;
 }
 
 .chat-form button:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #000000;
   outline-offset: 2px;
 }
 
@@ -122,22 +161,32 @@ body {
 
 /* footer */
 .site-footer {
-  margin: 60px 0 40px;
+  width: 100vw;
+  margin: 60px 0 0 calc(50% - 50vw);
+  padding: 24px 12px 32px;
+  font-family: "Whitney", Arial, sans-serif;
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #ffffff;
+  background: #000000;
 }
 
 .site-footer nav {
+  margin-top: 0;
+}
+
+.site-footer p {
   margin-top: 12px;
+  font-size: 12px;
 }
 
 .site-footer a {
   margin: 0 8px;
-  color: #000;
+  font-size: 16px;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #ffffff;
 }
